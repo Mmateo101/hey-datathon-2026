@@ -7,9 +7,10 @@ from pathlib import Path
 # ── Umbrales de riesgo ────────────────────────────────────────────────────────
 # Sincronizados con la celda 8 del notebook 03_modelo.ipynb.
 # Modificar aquí actualiza automáticamente el comportamiento en notebooks.
-UMBRAL_ALTO  = 0.70   # prob ≥ 0.70 → intervención inmediata
-UMBRAL_MEDIO = 0.40   # prob ≥ 0.40 → nurturing preventivo
-                      # prob <  0.40 → candidatos a cross-sell
+UMBRAL_ALTO   = 0.70   # prob ≥ 0.70 → intervención inmediata
+UMBRAL_MEDIO  = 0.40   # prob ≥ 0.40 → nurturing preventivo
+                       # prob <  0.40 → candidatos a cross-sell
+UMBRAL_OPTIMO = 0.35   # calibrado en 03_modelo.ipynb (Recall>=0.80, Precision>=0.35)
 
 
 def save_model(model, path: str) -> str:
